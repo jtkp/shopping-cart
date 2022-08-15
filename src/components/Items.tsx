@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const Home = () => {
+export const Items = () => {
   // useState
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Items</h1>
     </div>
   )
 }
