@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   // useState
 
   return (
     <StyledDiv>
-      <button>Generic Game Store</button>
-      <button>Shop</button>
+      <Link to='/'>
+        <button>Generic Game Store</button>
+      </Link>
+      <Link to='/shop'>
+        <button>Shop</button>
+      </Link>
       <input type="text" placeholder='Search' />
       <button>Cart</button>
     </StyledDiv>

@@ -26,7 +26,6 @@ export const Shop = () => {
           price: 12,
         }
       });
-      console.log('inside fetchGames()');
       setItems(gameList);
     }
 
