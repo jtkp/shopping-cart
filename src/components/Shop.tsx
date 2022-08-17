@@ -4,15 +4,10 @@ import { Game } from './util/Interfaces';
 
 let init = [
   {
-    name: 'Grand Theft Auto V',
-    image: '/here',
-    price: 12,
+    name: 'Fetching Catalog...',
+    image: '',
+    price: 0,
   },
-  {
-    name: 'Valorant',
-    image: '/there',
-    price: 420,
-  }
 ]
 
 export const Shop = () => {
@@ -27,7 +22,7 @@ export const Shop = () => {
       const gameList = data['results'].map((game: any) => {
         return {
           name: game.name,
-          image: game['background-image'],
+          image: game['background_image'],
           price: 12,
         }
       });

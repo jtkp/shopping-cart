@@ -1,6 +1,7 @@
 import React from 'react';
 import { Item } from './Item';
 import { ItemProps } from './util/Interfaces';
+import styled from 'styled-components';
 
 export const Items = ({ games }: ItemProps) => {
   let gamesList = games.map(({ name, image, price }, index) => {
@@ -10,9 +11,15 @@ export const Items = ({ games }: ItemProps) => {
   });
 
   return (
-    <div>
-      <h1>Items</h1>
+    <Div>
       {gamesList}
-    </div>
+    </Div>
   )
 }
+
+const Div = styled.div`
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+`
