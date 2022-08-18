@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createGlobalStyle } from 'styled-components';
+import "@fontsource/roboto"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -12,10 +13,12 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     background-color: rgb(240, 240, 240);
+    font-family: "Roboto";
   }
 
-  a {
+  a, a:hover, a:focus, a:active {
     text-decoration: none;
+    color: inherit;
   }
 `
 

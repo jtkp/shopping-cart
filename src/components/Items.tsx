@@ -19,7 +19,7 @@ export const Items = ({ games, handleClick }: ItemProps) => {
 
 const Div = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   gap: 2rem;
 `

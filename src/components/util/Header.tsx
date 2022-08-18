@@ -2,33 +2,57 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { IonIcon } from '@ionic/react';
-import { cartOutline } from 'ionicons/icons';
+import { cartOutline, gameControllerOutline } from 'ionicons/icons';
 
 export const Header = () => {
   // useState
 
   return (
-    <StyledDiv>
+    <Div>
       <Link to='/'>
+        <IonIcon icon={gameControllerOutline}></IonIcon>
         <h1>Game Store</h1>
       </Link>
       <Link to='/shop'>
-        <h1>Shop</h1>
+        <h1>Catalog</h1>
       </Link>
       <Link to='/cart'>
         <IonIcon icon={cartOutline}></IonIcon>
       </Link>
-    </StyledDiv>
+    </Div>
   )
 }
 
-const StyledDiv = styled.div`
+const Div = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   min-width: 100%;
   padding: 1rem;
   background-color: white;
+
+  a:first-child {
+    margin-right: auto;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  a:first-child > ion-icon {
+    margin-right: 0.5rem;
+    font-size: 3rem;
+  }
+  
+  a:first-child > h1{
+    font-size: 1.5rem;
+  }
+
+  a:nth-child(2) {
+    margin-right: 2rem;
+  }
+
+  a {
+    min-height: 2rem;
+  }
   
   ion-icon {
     font-size: 2rem;
