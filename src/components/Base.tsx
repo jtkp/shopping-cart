@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useOutletContext } from 'react-router-dom';
-import { ItemProps } from './util/Interfaces';
+import { Game, ItemProps } from './util/Interfaces';
 
 let init = [
   {
@@ -17,7 +17,8 @@ let init = [
 ]
 
 export const Base = () => {
-  const [games, setGames] = useState(init);
+  const [games, setGames] = useState<Game[]>(init);
+  const [cart, setCart] = useState<number[]>([]);
 
   const key = '6cc02bd22dd4452bbe0efcabb76d2956';
 
@@ -43,7 +44,7 @@ export const Base = () => {
   return (
     <Div>
       <Header></Header>
-      <Outlet context={games}></Outlet>
+      <Outlet context={[games, cart, setCart]}></Outlet>
       <Footer></Footer>
     </Div>
   )
