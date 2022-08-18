@@ -31,10 +31,10 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-items: center;
   gap: 2rem;
   padding: 1rem;
   
-  max-width: 1700px;
   @media (max-width: 1280px) {
     max-width: 100vw;
   }

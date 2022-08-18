@@ -51,6 +51,7 @@ const Div = styled.div`
   padding: 1rem;
   background-color: white;
   text-overflow: ellipsis;
+  width: 100%;
 
   section {
     display: flex;
@@ -71,6 +72,11 @@ const Div = styled.div`
 
   img {
     width: 300px;
+  }
+  
+  max-width: 900px;
+  @media (max-width: 900px) {
+    max-width: 100vw;
   }
 
   @media (max-width: 700px) {
