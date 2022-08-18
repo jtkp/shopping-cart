@@ -1,6 +1,8 @@
 import React from 'react';
 import { Game } from './util/Interfaces';
 import styled from 'styled-components';
+import { IonIcon } from '@ionic/react';
+import { addCircleOutline, removeCircleOutline } from 'ionicons/icons';
 
 export const CartItem = ({ id, name, image, price, quantity }: Game) => {
 
@@ -22,11 +24,18 @@ export const CartItem = ({ id, name, image, price, quantity }: Game) => {
         </div>
         <div>
           <h2>{quantity}</h2>
-          <h2>Buttons</h2>
+          <span></span>
         </div>
         <div>
           <span></span>
-          <h2 style={{ marginTop: '1rem' }}>Subtotal: ${price * quantity} AUD</h2>
+          <h3>SUBTOTAL</h3>
+        </div>
+        <div>
+          <div>
+            <IonIcon icon={removeCircleOutline} style={{ marginRight: '1rem' }}></IonIcon>
+            <IonIcon icon={addCircleOutline}></IonIcon>
+          </div>
+          <h2>${price * quantity} AUD</h2>
         </div>
       </section>
     </Div>
@@ -41,6 +50,7 @@ const Div = styled.div`
   border-radius: 1rem;
   padding: 1rem;
   background-color: white;
+  text-overflow: ellipsis;
 
   section {
     display: flex;
@@ -53,9 +63,14 @@ const Div = styled.div`
     display: flex;
     justify-content: space-between;
   }
+  
+  ion-icon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
   img {
-    width: 250px;
+    width: 300px;
   }
 
   @media (max-width: 700px) {
