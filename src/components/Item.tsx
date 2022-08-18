@@ -12,7 +12,7 @@ export const Item = ({ id, name, image, price, quantity, handleClick }: any) => 
     <Div>
       <img src={image} alt={name} />
       <p>{name}</p>
-      <p>${price}</p>
+      <p>${price} AUD</p>
       <button onClick={handleClickItem} data-id={id}>Add To Cart</button>
     </Div>
   )
