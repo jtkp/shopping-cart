@@ -41,11 +41,3 @@ const StyledDiv = styled.div`
     padding: 1rem 2rem;
   }
 `
-
-// shop
-  // cards x 16
-    // card
-      // image
-      // title
-      // price
-  // cart

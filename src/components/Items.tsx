@@ -3,10 +3,10 @@ import { Item } from './Item';
 import { ItemProps } from './util/Interfaces';
 import styled from 'styled-components';
 
-export const Items = ({ games }: ItemProps) => {
+export const Items = ({ games, handleClick }: ItemProps) => {
   let gamesList = games.map(({ name, image, price }, index) => {
     return (
-      <Item key={index} name={name} image={image} price={price}></Item>
+      <Item key={index} name={name} image={image} price={price} handleClick={handleClick}></Item>
     )
   });
 

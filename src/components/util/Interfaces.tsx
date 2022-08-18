@@ -6,4 +6,5 @@ export interface Game {
 
 export interface ItemProps {
   games: Game[];
+  handleClick: any;
 }

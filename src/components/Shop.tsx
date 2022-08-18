@@ -23,7 +23,7 @@ export const Shop = () => {
         return {
           name: game.name,
           image: game['background_image'],
-          price: 12,
+          price: 45,
         }
       });
       setItems(gameList);
@@ -32,10 +32,15 @@ export const Shop = () => {
     fetchData().catch(console.error);
   }, [])
 
+  const handleClick = (event: any) => {
+    let name = event.currentTarget.dataset.name;
+    console.log(`clicked on ${name}`);
+  }
+
   return (
     <Div>
       <h1>Shop</h1>
-      <Items games={items}></Items>
+      <Items games={items} handleClick={handleClick}></Items>
     </Div>
   )
 }

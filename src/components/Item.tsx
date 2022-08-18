@@ -2,11 +2,15 @@ import React from 'react';
 import { Game } from './util/Interfaces';
 import styled from 'styled-components';
 
-export const Item = ({ name, image, price }: Game) => {
+export const Item = ({ name, image, price, handleClick }: any) => {
   // useState
+  const handleClickItem = (event: any) => {
+    handleClick(event);
+  }
+
 
   return (
-    <Div>
+    <Div onClick={handleClickItem} data-name={name}>
       <h2>{name}</h2>
       <img src={image} alt={name} />
       <h2>${price}</h2>
