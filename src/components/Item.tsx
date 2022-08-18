@@ -42,6 +42,7 @@ const Div = styled.div`
     border-radius: 1rem;
     background-color: rgb(60, 60, 60);
     color: white;
+    cursor: pointer;
   }
 
   button:hover {

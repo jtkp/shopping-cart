@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <StyledDiv>
       <Link to='/'>
-        <h1>Generic Game Store</h1>
+        <h1>Game Store</h1>
       </Link>
       <Link to='/shop'>
         <h1>Shop</h1>
