@@ -20,6 +20,7 @@ export const Items = ({ games }: ItemProps) => {
 const Div = styled.div`
   border: 1px solid black;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+  gap: 2rem;
 `

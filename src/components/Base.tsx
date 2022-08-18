@@ -17,5 +17,12 @@ export const Base = () => {
 }
 
 const Div = styled.div`
-  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 1280px;
+
+  @media (max-width: 1280px) {
+    min-width: 100vw;
+  }
 `

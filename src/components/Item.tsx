@@ -15,13 +15,21 @@ export const Item = ({ name, image, price }: Game) => {
 }
 
 const Div = styled.div`
-  border: 1px solid black;
+  background-color: white;
+  box-shadow: 4px 4px 8px 1px rgba(60, 60, 60, 0.1);
   border-radius: 8px;
+  width: 400px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+
+  transition: transform 0.25s; 
+  &:hover {
+    transform: scale(1.03);
+  }
 
   h2 {
     font-size: 1.5rem;

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { IonIcon } from '@ionic/react';
+import { cartOutline } from 'ionicons/icons';
 
 export const Header = () => {
   // useState
@@ -8,13 +10,14 @@ export const Header = () => {
   return (
     <StyledDiv>
       <Link to='/'>
-        <button>Generic Game Store</button>
+        <h1>Generic Game Store</h1>
       </Link>
       <Link to='/shop'>
-        <button>Shop</button>
+        <h1>Shop</h1>
       </Link>
-      <input type="text" placeholder='Search' />
-      <button>Cart</button>
+      <Link to='/cart'>
+        <IonIcon icon={cartOutline}></IonIcon>
+      </Link>
     </StyledDiv>
   )
 }
@@ -23,7 +26,16 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  min-width: 100%;
+  padding: 1rem;
+  
+  ion-icon {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
   
   button {
     padding: 1rem 2rem;

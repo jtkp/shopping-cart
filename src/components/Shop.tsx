@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Items } from './Items';
-import { Game } from './util/Interfaces';
+import styled from 'styled-components';
 
 let init = [
   {
@@ -33,9 +33,15 @@ export const Shop = () => {
   }, [])
 
   return (
-    <div>
+    <Div>
       <h1>Shop</h1>
       <Items games={items}></Items>
-    </div>
+    </Div>
   )
 }
+
+const Div = styled.div`
+  background-color: rgb(240, 240, 240);
+  min-width: 100%;
+  padding: 1rem;
+`
