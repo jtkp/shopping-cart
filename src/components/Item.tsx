@@ -31,18 +31,14 @@ const Div = styled.div`
   align-items: center;
   text-align: center;
 
-  // transition: transform 0.25s; 
-  // &:hover {
-  //   transform: scale(1.03);
-  // }
-
   button {
     padding: 1rem 2rem;
     border: 0;
     background-color: rgb(60, 60, 60);
     color: white;
     cursor: pointer;
-    width: 80%;
+    width: 250px;
+    font-size: 1rem;
   }
 
   button:hover {
@@ -52,6 +48,10 @@ const Div = styled.div`
   p {
     margin: 0.5rem;
     font-size: 1.5rem;
+  }
+
+  p:nth-child(2) {
+    font-weight: 700;
   }
 
   img {

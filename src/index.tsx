@@ -6,10 +6,14 @@ import { createGlobalStyle } from 'styled-components';
 import "@fontsource/roboto"
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     padding: 0;
     margin: 0;
-    height: 100vh;
+  }
+
+  body {
+    min-width: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(240, 240, 240);

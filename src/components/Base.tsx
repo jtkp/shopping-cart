@@ -53,10 +53,10 @@ export const Base = () => {
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
   min-width: 1280px;
 
   @media (max-width: 1280px) {
-    min-width: 100vw;
+    min-width: 100%;
   }
 `

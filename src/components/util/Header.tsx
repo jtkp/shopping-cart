@@ -32,7 +32,7 @@ const Div = styled.div`
 
   a:first-child {
     margin-right: auto;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     display: flex;
     align-items: center;
   }
@@ -50,10 +50,6 @@ const Div = styled.div`
     margin-right: 2rem;
   }
 
-  a {
-    min-height: 2rem;
-  }
-  
   ion-icon {
     font-size: 2rem;
   }
