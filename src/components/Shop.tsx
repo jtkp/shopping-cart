@@ -1,46 +1,22 @@
-import { useEffect, useState } from 'react';
 import { Items } from './Items';
 import styled from 'styled-components';
-
-let init = [
-  {
-    name: 'Fetching Catalog...',
-    image: '',
-    price: 0,
-  },
-]
+import { useOutletContext } from 'react-router-dom';
+import { Game } from './util/Interfaces';
 
 export const Shop = () => {
-  const [items, setItems] = useState(init);
 
-  const key = '6cc02bd22dd4452bbe0efcabb76d2956';
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(`https://api.rawg.io/api/games?key=${key}&metacritic=80,100&page_size=16`);
-      const data = await response.json();
-      const gameList = data['results'].map((game: any) => {
-        return {
-          name: game.name,
-          image: game['background_image'],
-          price: 45,
-        }
-      });
-      setItems(gameList);
-    }
-
-    fetchData().catch(console.error);
-  }, [])
+  const games = useOutletContext() as Game[];
+  console.log(games);
 
   const handleClick = (event: any) => {
-    let name = event.currentTarget.dataset.name;
-    console.log(`clicked on ${name}`);
+    let id = event.currentTarget.dataset.id;
+    console.log(`clicked on game with id ${id}`);
   }
 
   return (
     <Div>
       <h1>Shop</h1>
-      <Items games={items} handleClick={handleClick}></Items>
+      <Items games={games} handleClick={handleClick}></Items>
     </Div>
   )
 }

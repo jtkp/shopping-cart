@@ -4,9 +4,9 @@ import { ItemProps } from './util/Interfaces';
 import styled from 'styled-components';
 
 export const Items = ({ games, handleClick }: ItemProps) => {
-  let gamesList = games.map(({ name, image, price }, index) => {
+  let gamesList = games.map(({ id, name, image, price }) => {
     return (
-      <Item key={index} name={name} image={image} price={price} handleClick={handleClick}></Item>
+      <Item key={id} id={id} name={name} image={image} price={price} handleClick={handleClick}></Item>
     )
   });
 
