@@ -5,8 +5,6 @@ import { IonIcon } from '@ionic/react';
 import { cartOutline, gameControllerOutline } from 'ionicons/icons';
 
 export const Header = () => {
-  // useState
-
   return (
     <Container>
       <Div>

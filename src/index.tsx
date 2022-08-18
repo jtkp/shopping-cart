@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
   }
 
   body {
