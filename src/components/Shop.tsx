@@ -34,7 +34,6 @@ export const Shop = () => {
 }
 
 const Div = styled.div`
-  background-color: rgb(240, 240, 240);
   min-width: 100%;
   padding: 1rem;
 `

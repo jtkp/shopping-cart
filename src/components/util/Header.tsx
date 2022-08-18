@@ -28,6 +28,7 @@ const StyledDiv = styled.div`
   align-items: center;
   min-width: 100%;
   padding: 1rem;
+  background-color: white;
   
   ion-icon {
     font-size: 2rem;

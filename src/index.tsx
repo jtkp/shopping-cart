@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: rgb(240, 240, 240);
+  }
+
+  a {
+    text-decoration: none;
   }
 `
 
