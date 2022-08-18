@@ -5,22 +5,24 @@ import { Game } from './util/Interfaces';
 
 type ContextType = [
   Game[],
-  number[],
-  React.Dispatch<React.SetStateAction<number[]>>
+  React.Dispatch<React.SetStateAction<Game[]>>
 ];
 
 export const Shop = () => {
-
-  const [games, cart, setCart] = useOutletContext() as ContextType;
+  const [games, setGames] = useOutletContext() as ContextType;
 
   const handleClick = (event: any) => {
-    let id = event.currentTarget.dataset.id;
+    let id = event.currentTarget.dataset.id as number;
     console.log(`clicked on game with id ${id}`);
-    let newCart = cart;
-    console.log(newCart);
-    newCart.push(id);
-    console.log(newCart);
-    setCart(newCart);
+    let newGames = games;
+    newGames.forEach(game => {
+      if (game.id == id) {
+        console.log('increment quantity');
+        game.quantity++;
+        return;
+      }
+    });
+    setGames(newGames);
   }
 
   return (

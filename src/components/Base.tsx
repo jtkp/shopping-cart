@@ -1,11 +1,10 @@
-import React, { ContextType } from 'react';
+import React from 'react';
 import { Header } from './util/Header';
 import { Footer } from './util/Footer';
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useOutletContext } from 'react-router-dom';
-import { Game, ItemProps } from './util/Interfaces';
+import { Game } from './util/Interfaces';
 
 let init = [
   {
@@ -13,12 +12,12 @@ let init = [
     name: 'Fetching Catalog...',
     image: '',
     price: 0,
+    quantity: 0,
   },
-]
+];
 
 export const Base = () => {
   const [games, setGames] = useState<Game[]>(init);
-  const [cart, setCart] = useState<number[]>([]);
 
   const key = '6cc02bd22dd4452bbe0efcabb76d2956';
 
@@ -32,6 +31,7 @@ export const Base = () => {
           name: game.name,
           image: game['background_image'],
           price: 45,
+          quantity: 0,
         }
       });
       console.log(gameList);
@@ -39,12 +39,12 @@ export const Base = () => {
     }
 
     fetchData().catch(console.error);
-  }, [])
+  }, []);
 
   return (
     <Div>
       <Header></Header>
-      <Outlet context={[games, cart, setCart]}></Outlet>
+      <Outlet context={[games, setGames]}></Outlet>
       <Footer></Footer>
     </Div>
   )

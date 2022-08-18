@@ -1,8 +1,7 @@
 import React from 'react';
-import { Game } from './util/Interfaces';
 import styled from 'styled-components';
 
-export const Item = ({ id, name, image, price, handleClick }: any) => {
+export const Item = ({ id, name, image, price, quantity, handleClick }: any) => {
   // useState
   const handleClickItem = (event: any) => {
     handleClick(event);
