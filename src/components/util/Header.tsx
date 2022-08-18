@@ -8,27 +8,40 @@ export const Header = () => {
   // useState
 
   return (
-    <Div>
-      <Link to='/'>
-        <IonIcon icon={gameControllerOutline}></IonIcon>
-        <h1>Game Store</h1>
-      </Link>
-      <Link to='/shop'>
-        <h1>Catalog</h1>
-      </Link>
-      <Link to='/cart'>
-        <IonIcon icon={cartOutline}></IonIcon>
-      </Link>
-    </Div>
+    <Container>
+      <Div>
+        <Link to='/'>
+          <IonIcon icon={gameControllerOutline}></IonIcon>
+          <h1>Game Store</h1>
+        </Link>
+        <Link to='/shop'>
+          <h1>Catalog</h1>
+        </Link>
+        <Link to='/cart'>
+          <IonIcon icon={cartOutline}></IonIcon>
+        </Link>
+      </Div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  min-width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+`
 
 const Div = styled.div`
   display: flex;
   align-items: center;
-  min-width: 100%;
   padding: 1rem;
   background-color: white;
+  
+  width: 1280px;
+  @media (max-width: 1280px) {
+    max-width: 100vw;
+  }
 
   a:first-child {
     margin-right: auto;

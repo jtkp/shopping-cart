@@ -23,7 +23,7 @@ export const Base = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`https://api.rawg.io/api/games?key=${key}&metacritic=80,100&page_size=16`);
+      const response = await fetch(`https://api.rawg.io/api/games?key=${key}&metacritic=80,100&page_size=20`);
       const data = await response.json();
       const gameList = data['results'].map((game: any) => {
         return {
@@ -53,10 +53,5 @@ export const Base = () => {
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  min-width: 1280px;
-
-  @media (max-width: 1280px) {
-    min-width: 100%;
-  }
+  min-height: 100vh;
 `

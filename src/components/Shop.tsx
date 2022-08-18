@@ -27,7 +27,7 @@ export const Shop = () => {
 
   return (
     <Div>
-      <h1>Shop</h1>
+      <h1>All Games</h1>
       <Items games={games} handleClick={handleClick}></Items>
     </Div>
   )
@@ -36,4 +36,9 @@ export const Shop = () => {
 const Div = styled.div`
   min-width: 100%;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 `

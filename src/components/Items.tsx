@@ -22,4 +22,9 @@ const Div = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   gap: 2rem;
+  
+  max-width: 1700px;
+  @media (max-width: 1280px) {
+    max-width: 100vw;
+  }
 `
