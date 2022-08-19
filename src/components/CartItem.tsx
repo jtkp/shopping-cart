@@ -4,10 +4,16 @@ import styled from 'styled-components';
 import { IonIcon } from '@ionic/react';
 import { addCircleOutline, removeCircleOutline } from 'ionicons/icons';
 
-export const CartItem = ({ id, name, image, price, quantity }: Game) => {
+export const CartItem = ({ id, name, image, price, quantity, handleAdd, handleRemove }: any) => {
+  const handleRemoveItem = (event: any) => {
+    handleRemove(event);
+  }
+  const handleAddItem = (event: any) => {
+    handleAdd(event);
+  }
 
   return (
-    <Div>
+    <Div >
       <img src={image} alt={name} />
       <section>
         <div>
@@ -32,8 +38,8 @@ export const CartItem = ({ id, name, image, price, quantity }: Game) => {
         </div>
         <div>
           <div>
-            <IonIcon icon={removeCircleOutline} style={{ marginRight: '1rem' }}></IonIcon>
-            <IonIcon icon={addCircleOutline}></IonIcon>
+            <IonIcon icon={removeCircleOutline} onClick={handleRemoveItem} data-id={id} style={{ marginRight: '1rem' }}></IonIcon>
+            <IonIcon icon={addCircleOutline} onClick={handleAddItem} data-id={id}></IonIcon>
           </div>
           <h2>${price * quantity} AUD</h2>
         </div>
