@@ -8,9 +8,10 @@ export const Home = () => {
   return (
     <Div>
       <h1>This is most certainly a site!</h1>
+      <h3>A mobile-friendly website, designed with <em>JavaScript/TypeScript</em> and the <em>React</em> framework. Fetches from the <a href="https://rawg.io/apidocs" style={{ color: 'rgb(128, 0, 0)' }}>RAWG Video Games Database API</a>, resulting in a purely frontend experience.</h3>
       <img src='./gamer.png' alt='Gamer drinking an energy drink'></img>
       <Link to='/shop'>
-        <button>Enter Shop Here!</button>
+        <button>Enter shop here!</button>
       </Link>
     </Div>
   )
@@ -27,6 +28,10 @@ const Div = styled.div`
   justify-content: center;
   gap: 2rem;
   text-align: center;
+
+  h3 {
+    max-width: 900px; 
+  }
 
   img {
     max-width: 60%;
@@ -46,5 +51,9 @@ const Div = styled.div`
     cursor: pointer;
     width: 250px;
     font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: rgb(120, 120, 120);
   }
 `
