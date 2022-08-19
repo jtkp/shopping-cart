@@ -10,10 +10,14 @@ export const Item = ({ id, name, image, price, quantity, handleClick }: any) => 
 
   return (
     <Div>
-      <img src={image} alt={name} />
-      <p>{name}</p>
-      <p>${price} AUD</p>
-      <button onClick={handleClickItem} data-id={id}>Add To Cart</button>
+      <div>
+        <img src={image} alt={name} />
+        <p>{name}</p>
+      </div>
+      <div>
+        <p>${price} AUD</p>
+        <button onClick={handleClickItem} data-id={id}>Add To Cart</button>
+      </div>
     </Div>
   )
 }
@@ -30,6 +34,8 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
+  min-height: 28rem;
 
   button {
     padding: 1rem 2rem;
