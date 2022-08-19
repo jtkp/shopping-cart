@@ -19,6 +19,7 @@ let init = [
 export const Base = () => {
   const [games, setGames] = useState<Game[]>(init);
   const [empty, setEmpty] = useState<boolean>(true);
+  const [total, setTotal] = useState<number>(0);
 
   const key = '6cc02bd22dd4452bbe0efcabb76d2956';
 
@@ -45,7 +46,7 @@ export const Base = () => {
   return (
     <Div>
       <Header></Header>
-      <Outlet context={[games, setGames, empty, setEmpty]}></Outlet>
+      <Outlet context={[games, setGames, empty, setEmpty, total, setTotal]}></Outlet>
       <Footer></Footer>
     </Div>
   )

@@ -16,4 +16,6 @@ export type ContextType = [
   React.Dispatch<React.SetStateAction<Game[]>>,
   boolean,
   React.Dispatch<React.SetStateAction<boolean>>,
+  number,
+  React.Dispatch<React.SetStateAction<number>>,
 ];

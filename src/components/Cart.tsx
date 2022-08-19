@@ -4,9 +4,10 @@ import { CartItem } from './CartItem';
 import { ContextType, Game } from './util/Interfaces';
 import styled from 'styled-components';
 import { Empty } from './Empty';
+import { Total } from './Total';
 
 export const Cart = () => {
-  const [games, setGames, empty, setEmpty] = useOutletContext() as ContextType;
+  const [games, setGames, empty, setEmpty, total, setTotal] = useOutletContext() as ContextType;
 
   let cartList = games.map(game => {
     if (game.quantity !== 0) {
@@ -18,7 +19,8 @@ export const Cart = () => {
 
   return (
     <Div>
-      {empty ? <Empty></Empty> : cartList}
+      {empty ? <Empty /> : cartList}
+      <Total total={total}></Total>
     </Div>
   )
 }
