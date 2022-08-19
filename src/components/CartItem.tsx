@@ -56,7 +56,7 @@ const Div = styled.div`
   border-radius: 1rem;
   padding: 1rem;
   background-color: white;
-  width: 100%;
+  width: 900px;
 
   section {
     display: flex;
@@ -82,9 +82,8 @@ const Div = styled.div`
     object-position: top;
   }
   
-  max-width: 900px;
-  @media (max-width: 900px) {
-    max-width: 100vw;
+  @media (max-width: 960px) {
+    max-width: 96vw;
   }
 
   @media (max-width: 700px) {
