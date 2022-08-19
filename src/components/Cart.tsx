@@ -66,6 +66,7 @@ export const Cart = () => {
 
   return (
     <Div>
+      <h1>Cart</h1>
       {empty ? <Empty /> : [cartList, <Total total={total}></Total>]}
     </Div>
   )
@@ -77,7 +78,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1rem;
   
   @media (max-width: 1280px) {

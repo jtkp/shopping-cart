@@ -21,8 +21,8 @@ export const CartItem = ({ id, name, image, price, quantity, handleAdd, handleRe
           <h3>PRICE</h3>
         </div>
         <div>
-          <h2 style={{ marginBottom: '1rem' }}>{name}</h2>
-          <h2>${price} AUD</h2>
+          <h2 style={{ marginBottom: '1rem', height: '3rem' }}>{name}</h2>
+          <h2 style={{ whiteSpace: 'nowrap' }}>${price} AUD</h2>
         </div>
         <div>
           <h3>QUANTITY</h3>
@@ -56,7 +56,6 @@ const Div = styled.div`
   border-radius: 1rem;
   padding: 1rem;
   background-color: white;
-  text-overflow: ellipsis;
   width: 100%;
 
   section {
