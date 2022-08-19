@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.ef81c757.css",
-    "main.js": "/shopping-cart/static/js/main.a13e0ef8.js",
+    "main.js": "/shopping-cart/static/js/main.2107bb44.js",
     "static/js/443.7881b028.chunk.js": "/shopping-cart/static/js/443.7881b028.chunk.js",
     "static/js/738.f2889135.chunk.js": "/shopping-cart/static/js/738.f2889135.chunk.js",
     "static/js/372.15c5c22e.chunk.js": "/shopping-cart/static/js/372.15c5c22e.chunk.js",
@@ -21,7 +21,7 @@
     "static/media/roboto-greek-ext-400-normal.woff2": "/shopping-cart/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "index.html": "/shopping-cart/index.html",
     "main.ef81c757.css.map": "/shopping-cart/static/css/main.ef81c757.css.map",
-    "main.a13e0ef8.js.map": "/shopping-cart/static/js/main.a13e0ef8.js.map",
+    "main.2107bb44.js.map": "/shopping-cart/static/js/main.2107bb44.js.map",
     "443.7881b028.chunk.js.map": "/shopping-cart/static/js/443.7881b028.chunk.js.map",
     "738.f2889135.chunk.js.map": "/shopping-cart/static/js/738.f2889135.chunk.js.map",
     "372.15c5c22e.chunk.js.map": "/shopping-cart/static/js/372.15c5c22e.chunk.js.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.ef81c757.css",
-    "static/js/main.a13e0ef8.js"
+    "static/js/main.2107bb44.js"
   ]
 }
