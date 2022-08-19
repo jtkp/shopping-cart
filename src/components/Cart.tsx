@@ -7,7 +7,7 @@ import { Empty } from './Empty';
 import { Total } from './Total';
 
 export const Cart = () => {
-  const [games, setGames, empty, setEmpty, total, setTotal] = useOutletContext() as ContextType;
+  const [games, setGames, empty, setEmpty, total, setTotal, quantity, setQuantity] = useOutletContext() as ContextType;
 
   const handleRemove = (event: any) => {
     let id = event.currentTarget.dataset.id as number;
@@ -22,6 +22,7 @@ export const Cart = () => {
           setEmpty(true);
         }
         setTotal(total - game.price);
+        setQuantity(quantity - 1);
         return;
       }
     });
@@ -39,6 +40,7 @@ export const Cart = () => {
         console.log('increment quantity');
         game.quantity++;
         setTotal(total + game.price);
+        setQuantity(quantity + 1);
         return;
       }
     });
@@ -70,6 +72,8 @@ export const Cart = () => {
 }
 
 const Div = styled.div`
+  position: relative;
+  top: 5rem;
   display: flex;
   flex-direction: column;
   justify-items: center;

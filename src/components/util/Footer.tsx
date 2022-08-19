@@ -12,8 +12,8 @@ export const Footer = () => {
 }
 
 const StyledDiv = styled.div`
+  min-width: 100vw;
   margin-top: auto;
-  min-width: 100%;
   padding: 1rem;
   text-align: center;
   background-color: white;

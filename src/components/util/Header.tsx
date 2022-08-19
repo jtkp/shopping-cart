@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { IonIcon } from '@ionic/react';
 import { cartOutline, gameControllerOutline } from 'ionicons/icons';
 
-export const Header = () => {
+export const Header = ({ quantity }: { quantity: number }) => {
   return (
     <Container>
       <Div>
@@ -17,6 +17,7 @@ export const Header = () => {
         </Link>
         <Link to='/cart'>
           <IonIcon icon={cartOutline}></IonIcon>
+          {quantity ? <h3>{quantity}</h3> : null}
         </Link>
       </Div>
     </Container>
@@ -24,6 +25,8 @@ export const Header = () => {
 }
 
 const Container = styled.div`
+  position: fixed;
+  z-index: 1;
   min-width: 100vw;
   background-color: white;
   display: flex;
@@ -71,5 +74,23 @@ const Div = styled.div`
   
   button {
     padding: 1rem 2rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    width: 1.25rem;
+    height: 1.25rem;
+    text-align: center;
+    line-height: 1.1rem;
+
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
   }
 `

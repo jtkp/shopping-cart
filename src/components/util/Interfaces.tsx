@@ -18,4 +18,6 @@ export type ContextType = [
   React.Dispatch<React.SetStateAction<boolean>>,
   number,
   React.Dispatch<React.SetStateAction<number>>,
+  number,
+  React.Dispatch<React.SetStateAction<number>>,
 ];

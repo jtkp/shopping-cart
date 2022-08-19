@@ -4,7 +4,7 @@ import { useOutletContext } from 'react-router-dom';
 import { ContextType, Game } from './util/Interfaces';
 
 export const Shop = () => {
-  const [games, setGames, empty, setEmpty, total, setTotal] = useOutletContext() as ContextType;
+  const [games, setGames, empty, setEmpty, total, setTotal, quantity, setQuantity] = useOutletContext() as ContextType;
 
   const handleClick = (event: any) => {
     let id = event.currentTarget.dataset.id as number;
@@ -16,6 +16,7 @@ export const Shop = () => {
         console.log('increment quantity');
         game.quantity++;
         setTotal(total + game.price);
+        setQuantity(quantity + 1);
         return;
       }
     });
@@ -33,6 +34,8 @@ export const Shop = () => {
 }
 
 const Div = styled.div`
+  position: relative;
+  top: 5rem;
   min-width: 100%;
   padding: 1rem;
   display: flex;
