@@ -1,16 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { CartItem } from './CartItem';
-import { Game } from './util/Interfaces';
+import { ContextType, Game } from './util/Interfaces';
 import styled from 'styled-components';
-
-type ContextType = [
-  Game[],
-  React.Dispatch<React.SetStateAction<Game[]>>
-];
+import { Empty } from './Empty';
 
 export const Cart = () => {
-  const [games, setGames] = useOutletContext() as ContextType;
+  const [games, setGames, empty, setEmpty] = useOutletContext() as ContextType;
 
   let cartList = games.map(game => {
     if (game.quantity !== 0) {
@@ -22,7 +18,7 @@ export const Cart = () => {
 
   return (
     <Div>
-      {cartList}
+      {empty ? <Empty></Empty> : cartList}
     </Div>
   )
 }

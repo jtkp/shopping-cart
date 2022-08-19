@@ -18,6 +18,7 @@ let init = [
 
 export const Base = () => {
   const [games, setGames] = useState<Game[]>(init);
+  const [empty, setEmpty] = useState<boolean>(true);
 
   const key = '6cc02bd22dd4452bbe0efcabb76d2956';
 
@@ -30,7 +31,7 @@ export const Base = () => {
           id: game.id,
           name: game.name,
           image: game['background_image'],
-          price: 45,
+          price: Math.floor((game.id / 100) + 5),
           quantity: 0,
         }
       });
@@ -44,7 +45,7 @@ export const Base = () => {
   return (
     <Div>
       <Header></Header>
-      <Outlet context={[games, setGames]}></Outlet>
+      <Outlet context={[games, setGames, empty, setEmpty]}></Outlet>
       <Footer></Footer>
     </Div>
   )

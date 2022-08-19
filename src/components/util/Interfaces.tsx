@@ -10,3 +10,10 @@ export interface ItemProps {
   games: Game[];
   handleClick: any;
 }
+
+export type ContextType = [
+  Game[],
+  React.Dispatch<React.SetStateAction<Game[]>>,
+  boolean,
+  React.Dispatch<React.SetStateAction<boolean>>,
+];

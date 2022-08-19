@@ -1,15 +1,10 @@
 import { Items } from './Items';
 import styled from 'styled-components';
 import { useOutletContext } from 'react-router-dom';
-import { Game } from './util/Interfaces';
-
-type ContextType = [
-  Game[],
-  React.Dispatch<React.SetStateAction<Game[]>>
-];
+import { ContextType, Game } from './util/Interfaces';
 
 export const Shop = () => {
-  const [games, setGames] = useOutletContext() as ContextType;
+  const [games, setGames, empty, setEmpty] = useOutletContext() as ContextType;
 
   const handleClick = (event: any) => {
     let id = event.currentTarget.dataset.id as number;
@@ -23,6 +18,7 @@ export const Shop = () => {
       }
     });
     setGames(newGames);
+    setEmpty(false);
   }
 
   return (
