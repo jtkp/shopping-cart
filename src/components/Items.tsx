@@ -18,13 +18,12 @@ export const Items = ({ games, handleClick }: ItemProps) => {
 }
 
 const Div = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-items: center;
+  display: flex;
+  flex: 0;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   
+  width: 100%;
   max-width: 1700px;
-  @media (max-width: 1280px) {
-    max-width: 100vw;
-  }
 `

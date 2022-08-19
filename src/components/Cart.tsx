@@ -72,8 +72,7 @@ export const Cart = () => {
 }
 
 const Div = styled.div`
-  position: relative;
-  top: 5rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-items: center;

@@ -65,10 +65,4 @@ const Div = styled.div`
     min-height: 250px;
     object-fit: cover;
   }
-
-  @media (max-width: 700px) {
-    p {
-      font-size: calc(1rem + 1vw);
-    }
-  }
 `

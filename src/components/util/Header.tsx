@@ -38,11 +38,7 @@ const Div = styled.div`
   align-items: center;
   padding: 1rem;
   background-color: white;
-  
   width: 1280px;
-  @media (max-width: 1280px) {
-    max-width: 100vw;
-  }
 
   a:first-child {
     margin-right: auto;
@@ -64,6 +60,10 @@ const Div = styled.div`
     margin-right: 2rem;
   }
 
+  a:nth-child(3) {
+    position: relative;
+  }
+
   ion-icon {
     font-size: 2rem;
   }
@@ -77,6 +77,9 @@ const Div = styled.div`
   }
 
   h3 {
+    position: absolute;
+    top: -5px;
+    right: -7px;
     font-size: 0.9rem;
     background-color: rgb(128, 0, 0);
     color: white;
@@ -85,12 +88,13 @@ const Div = styled.div`
     text-align: center;
     line-height: 1.1rem;
 
-    position: absolute;
-    right: 0.5rem;
-    top: 1rem;
     border: 1px solid black;
     border-radius: 50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
+  }
+
+  @media (max-width: 1280px) {
+    max-width: 100vw;
   }
 `

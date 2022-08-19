@@ -34,9 +34,8 @@ export const Shop = () => {
 }
 
 const Div = styled.div`
-  position: relative;
-  top: 5rem;
-  min-width: 100%;
+  margin-top: 5rem;
+  width: 100vw;
   padding: 1rem;
   display: flex;
   flex-direction: column;

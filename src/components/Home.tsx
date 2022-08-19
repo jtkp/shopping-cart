@@ -17,8 +17,7 @@ export const Home = () => {
 }
 
 const Div = styled.div`
-  position: relative;
-  top: 5rem;
+  margin-top: 5rem;
   min-width: 100%;
   min-height: 80vh;
   padding: 1rem;
