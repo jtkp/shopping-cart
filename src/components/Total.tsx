@@ -13,7 +13,7 @@ export const Total = ({ total }: any) => {
       <div>
         <h3>TOTAL</h3>
         <h2>${total} AUD</h2>
-        <button>Checkout</button>
+        <button style={{ marginTop: '1rem' }}>Checkout</button>
       </div>
     </Div>
   )

@@ -19,8 +19,7 @@ export const Cart = () => {
 
   return (
     <Div>
-      {empty ? <Empty /> : cartList}
-      <Total total={total}></Total>
+      {empty ? <Empty /> : [cartList, <Total total={total}></Total>]}
     </Div>
   )
 }

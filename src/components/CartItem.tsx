@@ -71,7 +71,10 @@ const Div = styled.div`
   }
 
   img {
-    width: 300px;
+    height: 200px;
+    width: 80%;
+    object-fit: cover;
+    object-position: top;
   }
   
   max-width: 900px;
@@ -86,6 +89,7 @@ const Div = styled.div`
       padding-top: 1rem;
     }
     img {
+      height: 300px;
       width: 100%;
     }
   }
